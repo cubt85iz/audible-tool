@@ -35,6 +35,14 @@ AutoUpdate=registry
 Restart=on-failure
 ```
 
+~/.config/containers/systemd/audible-tool.container.d/00-audible-tool-variables.conf_
+
+```
+[Container]
+Environment=ACTIVATION_BYTES=XYZ123AA
+Environment=REMOVE_PROCESSED_FILES=1
+```
+
 _~/.config/systemd/user/audible-tool.path_
 
 ```
