@@ -27,8 +27,8 @@ Description=Container for processing Audible AAX files
 [Container]
 ContainerName=%p
 Image=ghcr.io/cubt85iz/audible-tool:latest
-Volume=%h/Audiobooks/consume:/consume:z,rw,rslave,rbind
-Volume=%h/Audiobooks/staging:/staging:z,rw,rslave,rbind
+Volume=%h/Downloads:/consume:z,rw,rslave,rbind
+Volume=%h/Audiobooks:/staging:z,rw,rslave,rbind
 AutoUpdate=registry
 
 [Service]
@@ -43,7 +43,7 @@ Description=Service for processing Audible AAX files
 Requires=audible-tool.service
 
 [Path]
-PathChanged=%h/Audiobooks/consume
+PathChanged=%h/Downloads
 
 [Install]
 WantedBy=default.target
