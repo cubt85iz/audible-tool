@@ -35,7 +35,7 @@ AutoUpdate=registry
 Restart=on-failure
 ```
 
-~/.config/containers/systemd/audible-tool.container.d/00-audible-tool-variables.conf_
+_~/.config/containers/systemd/audible-tool.container.d/00-audible-tool-variables.conf_
 
 ```
 [Container]
