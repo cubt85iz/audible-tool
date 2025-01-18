@@ -33,4 +33,9 @@ for FILE in "${CONSUME_DIR}"/*.aax; do
   else
     echo "Skipping processed file ${FILE}."
   fi
+
+  # Cleanup processed file if desired
+  if [ "$REMOVE_PROCESSED_FILES" != "0" ]; then
+    rm "$FILE"
+  fi
 done
